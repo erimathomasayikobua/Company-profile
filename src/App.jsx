@@ -5,8 +5,6 @@ import Home from './Home';
 import Products from './Products';
 import AboutUs from './AboutUs';
 import Contact from './Contact';
-import AdminLogin from './components/Admin/AdminLogin';
-import AdminDashboard from './components/Admin/AdminDashboard';
 
 function App() {
   return (
