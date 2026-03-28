@@ -84,6 +84,7 @@ nav a.active::after {
 /* Footer */
 .footer {
   background: #2c3e50;
+  color: white;
   color: rgb(113, 112, 112);
   text-align: center;
   padding: 30px 20px;
