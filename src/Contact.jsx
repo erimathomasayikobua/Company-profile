@@ -224,9 +224,9 @@ function Contact() {
                                     <div className="info-content">
                                         <h3>Email Addresses</h3>
                                         <p>
-                                            info@revotechnologies.ug<br />
-                                            support@revotechnologies.ug<br />
-                                            sales@revotechnologies.ug
+                                            info@revotech.com<br />
+                                            support@revotech.com<br />
+                                            sales@revotech.com
                                         </p>
                                     </div>
                                 </div>
@@ -236,7 +236,7 @@ function Contact() {
                                     <div className="info-content">
                                         <h3>Business Hours</h3>
                                         <p>
-                                            Monday - Friday: 8:00 AM - 6:00 PM<br />
+                                            Monday - Friday: 8:00 AM - 5:00 PM<br />
                                             Saturday: 9:00 AM - 2:00 PM<br />
                                             Sunday: Closed
                                         </p>

@@ -27,7 +27,7 @@
 
 .header h1 {
   font-size: 1.8rem;
-  color: #333;
+  color: rgb(248, 252, 3);
   margin: 0;
   font-weight: 700;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -75,21 +75,6 @@ nav a.active::after {
   border-radius: 1px;
 }
 
-.admin-link {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white !important;
-  font-weight: 600;
-  padding: 10px 20px !important;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.admin-link:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  background-color: transparent !important;
-}
-
 /* Main Content */
 .Content {
   flex: 1;
@@ -99,14 +84,14 @@ nav a.active::after {
 /* Footer */
 .footer {
   background: #2c3e50;
-  color: white;
+  color: rgb(113, 112, 112);
   text-align: center;
   padding: 30px 20px;
   margin-top: auto;
 }
 
 .read-the-docs {
-  color: #bdc3c7;
+  color: #c4bff6;
   margin: 0;
   font-size: 0.9rem;
 }
@@ -133,11 +118,7 @@ nav a.active::after {
     padding: 6px 12px;
     font-size: 0.9rem;
   }
-  
-  .admin-link {
-    padding: 8px 16px !important;
-    font-size: 0.8rem;
-  }
+
 }
 
 @media (max-width: 480px) {

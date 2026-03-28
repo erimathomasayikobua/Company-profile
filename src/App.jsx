@@ -11,8 +11,6 @@ function App() {
     <Router>
       <Routes>
         {/* Admin Routes */}
-        <Route path='/admin/login' element={<AdminLogin />} />
-        <Route path='/admin/dashboard' element={<AdminDashboard />} />
 
         {/* Main Website Routes */}
         <Route path='*' element={
