@@ -8,7 +8,7 @@ function Home() {
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-content">
-                    <h1>Welcome to Revo Tech Uganda</h1>
+                    <h1>Welcome to Revo Tech Ug</h1>
                     <p className="hero-subtitle">Innovating financial and technology solutions for Africa and beyond</p>
                     <div className="hero-buttons">
                         <Link to="/products" className="btn-primary">Explore Our Services</Link>
@@ -25,7 +25,7 @@ function Home() {
             {/* Features Section */}
             <section className="features">
                 <div className="container">
-                    <h2>Why Choose Revo Technologies?</h2>
+                    <h2>Why Choose Revo Tech Ug?</h2>
                     <div className="features-grid">
                         <div className="feature-card">
                             <div className="feature-icon">💡</div>
@@ -79,7 +79,7 @@ function Home() {
             <section className="cta">
                 <div className="container">
                     <h2>Ready to Transform Your Business?</h2>
-                    <p>Join hundreds of businesses that trust Revo Technologies for their digital transformation</p>
+                    <p>Join hundreds of businesses that trust Revo Tech Ug for their digital transformation</p>
                     <Link to="/project" className="btn-primary">Start Your Project Today</Link>
                 </div>
             </section>

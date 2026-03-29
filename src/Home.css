@@ -31,7 +31,7 @@
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: #646060;
+    color: white;
 }
 
 .hero-subtitle {
@@ -66,7 +66,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #6b6666;
+    background-color: #4a5fd5;
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
 }

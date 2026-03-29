@@ -8,7 +8,7 @@ function AboutUs() {
             {/* Hero Section */}
             <section className="about-hero">
                 <div className="container">
-                    <h1>About Revo Technologies Uganda</h1>
+                    <h1>About Revo Tech Uganda</h1>
                     <p>Digitally Africa</p>
                 </div>
             </section>
@@ -20,7 +20,7 @@ function AboutUs() {
                         <div className="story-text">
                             <h2>Our Story</h2>
                             <p>
-                                Founded in 2025, Revo Technologies Uganda emerged from a vision to bridge the digital divide 
+                                Founded in 2025, Revo Tech Uganda emerged from a vision to bridge the digital divide 
                                 in Africa. We recognized the immense potential of technology to transform businesses and 
                                 communities across the continent, and set out to make that vision a reality.
                             </p>
@@ -34,7 +34,7 @@ function AboutUs() {
                                 cutting-edge solutions that empower businesses to thrive in the digital age.
                             </p>
                             <p>
-                                At Revo Technologies Uganda, we believe in the power of technology to create positive change.
+                                At Revo Tech Uganda, we believe in the power of technology to create positive change.
                                 Our mission is to deliver innovate solutions that drive growth, efficiency, and digital 
                                 transformation for businesses across africa.
                             </p>
