@@ -1,4 +1,17 @@
 /* Home Page Styles */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #f5f7fa;
+    --border-color: #e1e5e9;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+    --primary-shadow: rgba(102, 126, 234, 0.3);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
 .home {
     width: 100%;
     min-height: 100vh;
@@ -15,7 +28,7 @@
     display: flex;
     align-items: center;
     min-height: 80vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     color: white;
     padding: 60px 20px;
     gap: 40px;
@@ -100,6 +113,7 @@
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 600;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -107,14 +121,14 @@
 /* Features Section */
 .features {
     padding: 80px 0;
-    background-color: #f8f9fa;
+    background-color: var(--text-light);
 }
 
 .features h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #333;
+    color: var(--text-dark);
 }
 
 .features-grid {
@@ -146,18 +160,18 @@
 .feature-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--text-dark);
 }
 
 .feature-card p {
-    color: #666;
+    color: var(--text-medium);
     line-height: 1.6;
 }
 
 /* Stats Section */
 .stats {
     padding: 80px 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     color: white;
 }
 

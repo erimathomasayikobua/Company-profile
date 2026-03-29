@@ -1,8 +1,21 @@
 /* Products Page Styles */
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #f5f7fa;
+    --border-color: #e1e5e9;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow-hover: rgba(0, 0, 0, 0.15);
+    --primary-shadow: rgba(102, 126, 234, 0.3);
+    --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
 .products-page {
     padding: 40px 20px;
     min-height: 100vh;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, var(--text-light) 0%, #c3cfe2 100%);
 }
 
 .products-header {
@@ -12,14 +25,14 @@
 
 .products-header h2 {
     font-size: 2.5rem;
-    color: #333;
+    color: var(--text-dark);
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .products-header p {
     font-size: 1.2rem;
-    color: #666;
+    color: var(--text-medium);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -42,7 +55,7 @@
 .search-input {
     width: 100%;
     padding: 15px 20px;
-    border: 2px solid #e1e5e9;
+    border: 2px solid var(--border-color);
     border-radius: 25px;
     font-size: 1rem;
     outline: none;
@@ -50,7 +63,7 @@
 }
 
 .search-input:focus {
-    border-color: #667eea;
+    border-color: var(--primary-color);
 }
 
 .category-filters {
@@ -62,9 +75,9 @@
 
 .category-btn {
     padding: 10px 20px;
-    border: 2px solid #667eea;
+    border: 2px solid var(--primary-color);
     background: transparent;
-    color: #667eea;
+    color: var(--primary-color);
     border-radius: 25px;
     cursor: pointer;
     font-weight: 500;
@@ -72,12 +85,12 @@
 }
 
 .category-btn:hover {
-    background: #667eea;
+    background: var(--primary-color);
     color: white;
 }
 
 .category-btn.active {
-    background: #667eea;
+    background: var(--primary-color);
     color: white;
 }
 
@@ -94,14 +107,14 @@
     background: white;
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--shadow);
     transition: all 0.3s ease;
-    border: 1px solid #e1e5e9;
+    border: 1px solid var(--border-color);
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 20px 40px var(--shadow-hover);
 }
 
 .product-header {
@@ -113,13 +126,13 @@
 
 .product-header h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: var(--text-dark);
     margin: 0;
     font-weight: 600;
 }
 
 .product-category {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     color: white;
     padding: 5px 15px;
     border-radius: 20px;
@@ -128,7 +141,7 @@
 }
 
 .product-description {
-    color: #666;
+    color: var(--text-medium);
     line-height: 1.6;
     margin-bottom: 20px;
     font-size: 1rem;
@@ -139,7 +152,7 @@
 }
 
 .product-features h4 {
-    color: #333;
+    color: var(--text-dark);
     margin-bottom: 10px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -152,7 +165,7 @@
 }
 
 .product-features li {
-    color: #666;
+    color: var(--text-medium);
     padding: 5px 0;
     position: relative;
     padding-left: 20px;
@@ -162,7 +175,7 @@
     content: "✓";
     position: absolute;
     left: 0;
-    color: #667eea;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -171,17 +184,17 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 20px;
-    border-top: 1px solid #e1e5e9;
+    border-top: 1px solid var(--border-color);
 }
 
 .product-price {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #667eea;
+    color: var(--primary-color);
 }
 
 .contact-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-primary);
     color: white;
     border: none;
     padding: 12px 25px;
@@ -193,13 +206,13 @@
 
 .contact-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 8px 25px var(--primary-shadow);
 }
 
 .no-products {
     text-align: center;
     padding: 60px 20px;
-    color: #666;
+    color: var(--text-medium);
     font-size: 1.2rem;
 }
 
