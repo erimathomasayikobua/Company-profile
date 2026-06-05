@@ -212,6 +212,8 @@
     margin-bottom: 30px;
     color: #f2f4fe;
     opacity: 1;
+}
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
