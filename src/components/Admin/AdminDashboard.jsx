@@ -42,19 +42,6 @@ function AdminDashboard() {
         }
     };
 
-    const loadCategories = async () => {
-        try {
-            const response = await fetch('/api/categories');
-            if (response.ok) {
-                const data = await response.json();
-                return data;
-            }
-        } catch (error) {
-            console.error('Error loading categories:', error);
-        }
-        return [];
-    };
-
     const handleLogout = () => {
         localStorage.removeItem('adminToken');
         localStorage.removeItem('adminUser');

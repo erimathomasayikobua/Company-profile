@@ -1,0 +1,231 @@
+.projects-page {
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.projects-hero {
+    padding: 72px 20px;
+    background: linear-gradient(135deg, #25324d 0%, #667eea 54%, #25a18e 100%);
+    color: white;
+}
+
+.projects-hero-content {
+    position: relative;
+    max-width: 1120px;
+    margin: 0 auto;
+    min-height: 420px;
+    padding: 72px 48px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+}
+
+.projects-hero-content > *:not(.projects-photo) {
+    position: relative;
+    z-index: 1;
+}
+
+.projects-hero span {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #d9f1ff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.projects-hero h1 {
+    max-width: 760px;
+    color: white;
+    font-size: 3rem;
+    line-height: 1.12;
+    margin-bottom: 18px;
+}
+
+.projects-hero p {
+    max-width: 760px;
+    color: #f7f9ff;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.projects-list {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+    display: grid;
+    gap: 28px;
+}
+
+.project-card {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: 28px;
+    align-items: stretch;
+    padding: 28px;
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.project-media {
+    min-height: 240px;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.project-media img {
+    width: 100%;
+    height: 100%;
+    max-height: 280px;
+    object-fit: contain;
+    padding: 22px;
+}
+
+.project-content {
+    min-width: 0;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.project-meta span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 12px;
+    border-radius: 8px;
+    background: #edf2ff;
+    color: #4f46e5;
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.project-meta span:last-child {
+    background: #e8f7ef;
+    color: #147a45;
+}
+
+.project-content h2 {
+    color: #1e293b;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.project-features {
+    margin-top: 20px;
+    padding: 20px;
+    border-left: 4px solid #25a18e;
+    border-radius: 8px;
+    background: #f8fafc;
+}
+
+.project-features h3 {
+    color: #1e293b;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.project-features ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.project-features li {
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.project-features li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 820px) {
+    .projects-hero-content {
+        min-height: 360px;
+        padding: 48px 28px;
+    }
+
+    .projects-photo {
+        background-position: center;
+    }
+
+    .projects-photo::after {
+        background: linear-gradient(180deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.58));
+    }
+
+    .projects-hero {
+        padding: 52px 18px;
+    }
+
+    .projects-hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .projects-hero p {
+        font-size: 1rem;
+    }
+
+    .projects-list {
+        padding: 34px 16px 56px;
+    }
+
+    .project-card {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .project-media {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.45rem;
+    }
+
+    .project-features {
+        padding: 16px;
+    }
+}
+
+.projects-photo {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url('/work.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.projects-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.5));
+}

@@ -36,7 +36,10 @@ function Contact() {
                 body: JSON.stringify(formData),
             });
 
-            const data = await response.json();
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
+
             setSubmitStatus('success');
             setFormData({
                 name: '',

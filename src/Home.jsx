@@ -80,7 +80,7 @@ function Home() {
                 <div className="container">
                     <h2>Ready to Transform Your Business?</h2>
                     <p>Join hundreds of businesses that trust Revo Tech Ug for their digital transformation</p>
-                    <Link to="/project" className="btn-primary">Start Your Project Today</Link>
+                    <Link to="/projects" className="btn-primary">Start Your Project Today</Link>
                 </div>
             </section>
         </div>

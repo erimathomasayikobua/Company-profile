@@ -1,5 +1,6 @@
 // Global error handling middleware
 const errorHandler = (err, req, res, next) => {
+    void next;
     console.error('Error:', err);
 
     // Default error

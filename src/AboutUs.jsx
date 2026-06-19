@@ -93,14 +93,6 @@ function AboutUs() {
                             <p className="role">CEO & Founder</p>
                             <p className="bio">Visionary leader with 5+ years in technology and business development.</p>
                         </div>
-                        <div className="team-member">
-                            <div className="member-photo">
-                                <span>👩‍💻</span>
-                            </div>
-                            <h4>Tumwebaze Tonny</h4>
-                            <p className="role">Chief Technical Officer</p>
-                            <p className="bio">Technical expert specializing in scalable architecture and cloud solutions.</p>
-                        </div>
 
                         <div className="team-member">
                             <div className="member-photo">
@@ -119,13 +111,23 @@ function AboutUs() {
                             <p className="role">Chief Financial Officer</p>
                             <p className="bio">Expert in the finance department.</p>
                         </div>
+
                         <div className="team-member">
                             <div className="member-photo">
                                 <span><img src='Kwoji.png' alt="Kwoji Jomo David" /></span>
                             </div>
                             <h4>Kwoji Jomo David</h4>
-                            <p className="role">Head of Sales & Marketing</p>
+                            <p className="role">Procurement Manager</p>
                             <p className="bio">Logistics and Procurement personnel with experience in the field for over 4+ years.</p>
+                        </div>
+
+                        <div className=' team-member'>
+                            <div className='member-photo'>
+                                <span><img src='Roony.jpg' alt="Roony pic" /></span>
+                            </div>
+                            <h4>Mugasa Roony</h4>
+                            <p className="role">Head of Sales and Marketing</p>
+                            <p className="bio"></p>
                         </div>
                     </div>
                 </div>
@@ -176,6 +178,7 @@ function AboutUs() {
                                 <span className="tech-item">Vue.js</span>
                                 <span className="tech-item">Angular</span>
                                 <span className="tech-item">TypeScript</span>
+                                <span className="tech-item">HTML/CSS</span>
                             </div>
                         </div>
                         <div className="tech-category">

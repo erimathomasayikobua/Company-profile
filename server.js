@@ -207,7 +207,7 @@ app.post('/api/contact', validateContactForm, asyncHandler(async (req, res) => {
 }));
 
 // Get contact submissions (admin)
-app.get('/api/admin/contacts', authenticateToken, async (req, res) => {
+app.get('/api/admin/contacts', authenticateToken, validatePagination, async (req, res) => {
     try {
         const { page = 1, limit = 20 } = req.query;
         const offset = (page - 1) * limit;
@@ -221,7 +221,7 @@ app.get('/api/admin/contacts', authenticateToken, async (req, res) => {
 });
 
 // Get single contact submission (admin)
-app.get('/api/admin/contacts/:id', authenticateToken, async (req, res) => {
+app.get('/api/admin/contacts/:id', authenticateToken, validateId, async (req, res) => {
     try {
         const submissionId = parseInt(req.params.id);
         const submission = await database.getContactSubmissionById(submissionId);
@@ -238,15 +238,8 @@ app.get('/api/admin/contacts/:id', authenticateToken, async (req, res) => {
 });
 
 // Update contact submission status (admin)
-app.put('/api/admin/contacts/:id/status', authenticateToken, [
-    body('status').isIn(['new', 'read', 'replied', 'closed']).withMessage('Invalid status')
-], async (req, res) => {
+app.put('/api/admin/contacts/:id/status', authenticateToken, validateId, validateContactStatus, async (req, res) => {
     try {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ message: 'Validation failed', errors: errors.array() });
-        }
-
         const submissionId = parseInt(req.params.id);
         const { status } = req.body;
 
@@ -289,7 +282,7 @@ app.get('/api/admin/analytics', authenticateToken, async (req, res) => {
 });
 
 // Track page view
-app.post('/api/analytics/track', async (req, res) => {
+app.post('/api/analytics/track', validateAnalyticsTracking, async (req, res) => {
     try {
         const { page, referrer, session_id } = req.body;
         const ip_address = req.ip || req.connection.remoteAddress;
@@ -311,16 +304,8 @@ app.post('/api/analytics/track', async (req, res) => {
 });
 
 // Newsletter subscription
-app.post('/api/newsletter/subscribe', [
-    body('email').isEmail().withMessage('Valid email is required'),
-    body('name').optional().isLength({ min: 2 }).withMessage('Name must be at least 2 characters')
-], async (req, res) => {
+app.post('/api/newsletter/subscribe', validateNewsletterSubscription, async (req, res) => {
     try {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ message: 'Validation failed', errors: errors.array() });
-        }
-
         const { email, name } = req.body;
         
         await database.subscribeNewsletter(email, name, 'website');
@@ -358,15 +343,8 @@ app.get('/api/admin/settings', authenticateToken, async (req, res) => {
 });
 
 // Update site setting (admin)
-app.put('/api/admin/settings/:key', authenticateToken, [
-    body('value').notEmpty().withMessage('Setting value is required')
-], async (req, res) => {
+app.put('/api/admin/settings/:key', authenticateToken, validateSiteSetting, async (req, res) => {
     try {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.status(400).json({ message: 'Validation failed', errors: errors.array() });
-        }
-
         const { key } = req.params;
         const { value } = req.body;
 

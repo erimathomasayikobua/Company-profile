@@ -70,7 +70,7 @@ const defaultProducts = [
 ];
 
 function Products() {
-    const [products, setProducts] = useState(defaultProducts);
+    const [products] = useState(defaultProducts);
     const [filteredProducts, setFilteredProducts] = useState(defaultProducts);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [searchTerm, setSearchTerm] = useState('');
