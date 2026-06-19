@@ -8,7 +8,7 @@ const projects = [
         image: '/davi-express-logo.png',
         alt: 'Dove Xpress logo',
         category: 'Transport & Logistics Platform',
-        status: 'Active',
+        status: 'in Active development',
         description:
             'Dove Express Integrated Transport & Logistics Platform is a comprehensive digital solution designed to modernize passenger transport, parcel delivery, and customer service operations across Uganda and South Sudan.',
         details:
