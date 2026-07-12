@@ -227,9 +227,9 @@ function Contact() {
                                     <div className="info-content">
                                         <h3>Email Addresses</h3>
                                         <p>
-                                            info@acitechnologies.org<br />
-                                            support@acitechnologies.org<br />
-                                            sales@acitechnologies.org
+                                            info@revotechug.org<br />
+                                            support@revotechug.org<br />
+                                            sales@revotechug.org
                                         </p>
                                     </div>
                                 </div>

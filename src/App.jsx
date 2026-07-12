@@ -18,7 +18,7 @@ function App() {
           <>
             <header className='header'>
               <img src="Aci.png" alt="ACI Tech Logo" className='logo' />
-              <h1>ACI Technologies</h1>
+              <h1>Revo Tech Uganda</h1>
               <nav>
                 <NavLink to='/' className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
                 <NavLink to='/products' className={({ isActive }) => isActive ? "active" : ""}>Services</NavLink>
@@ -41,7 +41,7 @@ function App() {
 
             <footer className='footer'>
               <p className="read-the-docs">
-                Product of ACI Technologies © 2025. All rights reserved.
+                Product of Revo Tech Uganda © 2025. All rights reserved.
               </p>
             </footer>
           </>

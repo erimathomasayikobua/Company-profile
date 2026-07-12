@@ -8,7 +8,7 @@ function Home() {
             {/* Hero Section */}
             <section className="hero">
                 <div className="hero-content">
-                    <h1>Welcome to Aci Technologies</h1>
+                    <h1>Welcome to Revo Tech Uganda</h1>
                     <p className="hero-subtitle">Innovating financial and technology solutions for Africa and beyond</p>
                     <div className="hero-buttons">
                         <Link to="/products" className="btn-primary">Explore Our Services</Link>
@@ -16,6 +16,7 @@ function Home() {
                     </div>
                 </div>
                 <div className="hero-image">
+                    <img src='icv.jpeg' alt='Innovation' />
                     <div className="hero-placeholder">
                         <span>🚀 Technology Innovation</span>
                     </div>
