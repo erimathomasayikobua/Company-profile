@@ -17,8 +17,8 @@ function App() {
         <Route path='*' element={
           <>
             <header className='header'>
-              <img src="revo tech logo-01.png" alt="Revo Tech Logo" className='logo' />
-              <h1>Revo Tech Uganda</h1>
+              <img src="Aci.png" alt="ACI Tech Logo" className='logo' />
+              <h1>ACI Technologies</h1>
               <nav>
                 <NavLink to='/' className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
                 <NavLink to='/products' className={({ isActive }) => isActive ? "active" : ""}>Services</NavLink>
@@ -41,7 +41,7 @@ function App() {
 
             <footer className='footer'>
               <p className="read-the-docs">
-                Product of Revo Technologies © 2025. All rights reserved.
+                Product of ACI Technologies © 2025. All rights reserved.
               </p>
             </footer>
           </>
