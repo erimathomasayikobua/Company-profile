@@ -34,14 +34,14 @@ class Database {
         try {
             // Read and execute schema
             const schemaPath = path.join(__dirname, 'schema.sql');
-            const schema = fs.readFileSync(schemaPath, 'utf8');
+            const schema = await fs.promises.readFile(schemaPath, 'utf8');
             await this.exec(schema);
 
             // Check if database is empty and seed if necessary
             const userCount = await this.get('SELECT COUNT(*) as count FROM users');
             if (userCount.count === 0) {
                 const seedPath = path.join(__dirname, 'seed.sql');
-                const seed = fs.readFileSync(seedPath, 'utf8');
+                const seed = await fs.promises.readFile(seedPath, 'utf8');
                 await this.exec(seed);
                 console.log('Database seeded with initial data');
             }

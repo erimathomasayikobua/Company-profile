@@ -5,9 +5,13 @@ import jwt from 'jsonwebtoken';
 import path from 'path';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
+import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import database from './database/database.js';
 import { errorHandler, notFound, asyncHandler } from './middleware/errorHandler.js';
+import { sendContactNotification, sendNewsletterConfirmation } from './utils/emailService.js';
+
+dotenv.config();
 import {
     validateAdminLogin,
     validateProduct,
@@ -194,10 +198,15 @@ app.post('/api/contact', validateContactForm, asyncHandler(async (req, res) => {
 
     await database.createContactSubmission(submissionData);
 
+    // Send notification email to admin
+    sendContactNotification(submissionData).catch(err => console.error('Email notification failed:', err));
+
     // Subscribe to newsletter if requested
     if (newsletter) {
         try {
             await database.subscribeNewsletter(email, name, 'contact_form');
+            // Send confirmation email to subscriber
+            sendNewsletterConfirmation(email, name).catch(err => console.error('Newsletter confirmation failed:', err));
         } catch (error) {
             console.log('Newsletter subscription error:', error.message);
         }
@@ -309,6 +318,9 @@ app.post('/api/newsletter/subscribe', validateNewsletterSubscription, async (req
         const { email, name } = req.body;
         
         await database.subscribeNewsletter(email, name, 'website');
+        // Send confirmation email to subscriber
+        sendNewsletterConfirmation(email, name).catch(err => console.error('Newsletter confirmation failed:', err));
+        
         res.json({ message: 'Successfully subscribed to newsletter!' });
     } catch (error) {
         console.error('Newsletter subscription error:', error);
@@ -389,5 +401,4 @@ app.use(errorHandler);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-    console.log(`Admin login: admin / admin123`);
 });

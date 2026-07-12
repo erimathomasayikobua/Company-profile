@@ -16,8 +16,8 @@ function Home() {
                     </div>
                 </div>
                 <div className="hero-image">
-                    <img src='icv.jpeg' alt='Innovation' />
                     <div className="hero-placeholder">
+                        <img src='Icv.jpeg' alt='Innovation' />
                         <span>🚀 Technology Innovation</span>
                     </div>
                 </div>
