@@ -31,34 +31,30 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
-// Security middleware
 app.use(helmet());
 
-// Rate limiting
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100, // limit each IP to 100 requests per windowMs
+    windowMs: 15 * 60 * 1000, 
+    max: 100, 
     message: 'Too many requests from this IP, please try again later.'
 });
 app.use('/api/', limiter);
 
-// Stricter rate limiting for auth endpoints
 const authLimiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 5, // limit each IP to 5 requests per windowMs
+    windowMs: 15 * 60 * 1000, 
+    max: 5, 
     message: 'Too many authentication attempts, please try again later.'
 });
 app.use('/api/admin/login', authLimiter);
 
-// Middleware
+
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
-// Initialize database
 database.init().catch(console.error);
 
-// Authentication middleware
+
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
@@ -76,9 +72,7 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
-// Routes
 
-// Admin authentication
 app.post('/api/admin/login', validateAdminLogin, asyncHandler(async (req, res) => {
     const { username, password } = req.body;
 
@@ -105,13 +99,13 @@ app.post('/api/admin/login', validateAdminLogin, asyncHandler(async (req, res) =
     });
 }));
 
-// Get all products (admin)
+
 app.get('/api/admin/products', authenticateToken, asyncHandler(async (req, res) => {
     const products = await database.getAllProducts();
     res.json(products);
 }));
 
-// Get single product (admin)
+
 app.get('/api/admin/products/:id', authenticateToken, validateId, asyncHandler(async (req, res) => {
     const productId = parseInt(req.params.id);
     const product = await database.getProductById(productId);
@@ -123,7 +117,6 @@ app.get('/api/admin/products/:id', authenticateToken, validateId, asyncHandler(a
     res.json(product);
 }));
 
-// Add new product (admin)
 app.post('/api/admin/products', authenticateToken, validateProduct, asyncHandler(async (req, res) => {
     const { name, description, price, category_id, features, image_url, is_featured } = req.body;
 
@@ -165,7 +158,6 @@ app.put('/api/admin/products/:id', authenticateToken, validateId, validateProduc
     res.json({ message: 'Product updated successfully', product: updatedProduct });
 }));
 
-// Delete product (admin)
 app.delete('/api/admin/products/:id', authenticateToken, validateId, asyncHandler(async (req, res) => {
     const productId = parseInt(req.params.id);
     
