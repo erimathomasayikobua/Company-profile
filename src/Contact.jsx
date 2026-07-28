@@ -138,6 +138,7 @@ function Contact() {
                                     >
                                         <option value="">Select a subject</option>
                                         <option value="general">General Inquiry</option>
+                                        <option value="price">Price Inquiry</option>
                                         <option value="services">Services Information</option>
                                         <option value="partnership">Partnership Opportunity</option>
                                         <option value="support">Technical Support</option>
