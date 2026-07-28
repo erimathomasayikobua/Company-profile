@@ -66,7 +66,7 @@ const defaultProducts = [
         price: "Contact for pricing",
         category: "Data Analytics",
         features: ["Business Intelligence", "Real-time Analytics", "Custom Dashboards", "Data Visualization"]
-    }
+    },
     {
         id: 9,
         name: "Digital Marketing Services",
