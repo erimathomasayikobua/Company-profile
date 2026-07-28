@@ -26,7 +26,7 @@ function Home() {
             {/* Features Section */}
             <section className="features">
                 <div className="container">
-                    <h2>Why Choose Aci Technologies?</h2>
+                    <h2>Why Choose Revo Tech Ug?</h2>
                     <div className="features-grid">
                         <div className="feature-card">
                             <div className="feature-icon">💡</div>
