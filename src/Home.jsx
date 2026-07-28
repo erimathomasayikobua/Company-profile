@@ -80,7 +80,7 @@ function Home() {
             <section className="cta">
                 <div className="container">
                     <h2>Ready to Transform Your Business?</h2>
-                    <p>Join hundreds of businesses that trust Aci Technologies for their digital transformation</p>
+                    <p>Join hundreds of businesses that trust Revo Tech Ug for their digital transformation</p>
                     <Link to="/projects" className="btn-primary">Start Your Project Today</Link>
                 </div>
             </section>
