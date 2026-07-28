@@ -15,7 +15,7 @@ const defaultProducts = [
         id: 2,
         name: "E-Commerce Platform",
         description: "Comprehensive e-commerce solution with payment integration, inventory management, and analytics.",
-        price: "Starting from $2,500",
+        price: "Contact for pricing",
         category: "E-Commerce",
         features: ["Payment Integration", "Inventory Management", "Analytics Dashboard", "Mobile Responsive"]
     },
@@ -31,7 +31,7 @@ const defaultProducts = [
         id: 4,
         name: "POS Management System",
         description: "Point of sale system for retail businesses with inventory tracking and sales analytics.",
-        price: "Starting from $1,200",
+        price: "Contact for pricing",
         category: "Retail Technology",
         features: ["Inventory Tracking", "Sales Analytics", "Receipt Management", "Multi-location Support"]
     },
@@ -39,7 +39,7 @@ const defaultProducts = [
         id: 5,
         name: "Cloud Infrastructure",
         description: "Scalable cloud infrastructure solutions for businesses of all sizes with 99.9% uptime guarantee.",
-        price: "Starting from $500/month",
+        price: "Contact for pricing",
         category: "Cloud Services",
         features: ["Scalable Infrastructure", "99.9% Uptime", "24/7 Support", "Data Backup"]
     },
@@ -47,7 +47,7 @@ const defaultProducts = [
         id: 6,
         name: "Mobile App Development",
         description: "Custom mobile applications for iOS and Android with modern UI/UX design.",
-        price: "Starting from $5,000",
+        price: "Contact for pricing",
         category: "Mobile Development",
         features: ["iOS & Android", "Modern UI/UX", "API Integration", "App Store Deployment"]
     },
@@ -55,7 +55,7 @@ const defaultProducts = [
         id: 7,
         name: "Web Development",
         description: "Responsive web applications with modern frameworks and optimal performance.",
-        price: "Starting from $3,000",
+        price: "Contact for pricing",
         category: "Web Development",
         features: ["Responsive Design", "Modern Frameworks", "SEO Optimized", "Fast Loading"]
     },
@@ -63,9 +63,17 @@ const defaultProducts = [
         id: 8,
         name: "Data Analytics Platform",
         description: "Advanced analytics platform for business intelligence and data-driven decision making.",
-        price: "Starting from $2,000",
+        price: "Contact for pricing",
         category: "Data Analytics",
         features: ["Business Intelligence", "Real-time Analytics", "Custom Dashboards", "Data Visualization"]
+    }
+    {
+        id: 9,
+        name: "Digital Marketing Services",
+        description: "Digital marketing solutions including SEO, Social Media Marketing, and PPC campaigns to boost your online presence.",
+        price: "Contact for pricing",
+        category: "Digital Marketing",
+        features: ["SEO Optimization", "Social Media Marketing", "PPC creation", "Content creation & Marketing"]
     }
 ];
 
