@@ -18,7 +18,6 @@ function App() {
           <>
             <header className='header'>
               <img src="Aci.png" alt="ACI Tech Logo" className='logo' />
-              <h1>Revo Tech Uganda</h1>
               <nav>
                 <NavLink to='/' className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
                 <NavLink to='/products' className={({ isActive }) => isActive ? "active" : ""}>Services</NavLink>

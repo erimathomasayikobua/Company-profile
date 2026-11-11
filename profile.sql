@@ -20,3 +20,4 @@ use Company_Profile;
         USERNAME VARCHAR (100) UNIQUE NOT NULL,
         PASSWORD VARCHAR (100) NOT NULL
  );
+ 
